@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <ApplicationInsightsResourceId>/subscriptions/bc9fb4d3-6733-47b4-9460-fe5fa30d8f34/resourcegroups/rg-cc-logging/providers/microsoft.insights/components/ais-cc-logging</ApplicationInsightsResourceId>
+    <ApplicationInsightsAnnotationResourceId>/subscriptions/bc9fb4d3-6733-47b4-9460-fe5fa30d8f34/resourcegroups/rg-cc-logging/providers/microsoft.insights/components/ais-cc-logging</ApplicationInsightsAnnotationResourceId>
+    <UserSecretsId>30bc070b-3e8d-4e12-907c-ca6f3f758c72</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.2.1" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MockRequestData\MockRequestData.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+
+</Project>
