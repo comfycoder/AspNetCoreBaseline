@@ -24,8 +24,6 @@ namespace AspNetCoreApi.Controllers
         [HttpGet("", Name = "GetValues")]
         public IEnumerable<string> Get()
         {
-            throw new ApplicationException("Oops! What happened?!!!");
-
             return new string[] { "value1", "value2" };
         }
 
